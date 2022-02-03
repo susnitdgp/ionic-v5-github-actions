@@ -36,7 +36,7 @@ jobs:
         run: ionic cordova platform add android@latest
 
       - name: Build Android Dev APK
-        run: ionic cordova build android --noconfirm:yes
+        run: ionic cordova build android --no-interactive --confirm
 
       - name: Generate the Android App Bundle
         working-directory: ./platforms/android/
