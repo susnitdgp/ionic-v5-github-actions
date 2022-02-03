@@ -22,3 +22,17 @@ jobs:
       
     - name: Echo Message
       run: echo Hello World
+      
+    - name: Use coturiv/setup-ionic
+      uses: coturiv/setup-ionic@v1
+      with:
+        java-version: 8
+        
+    - name: Use coturiv/setup-ionic
+      uses: coturiv/setup-ionic@v1
+      with:
+          cordova-version: 8
+
+    - name: Build
+      run: |
+        ionic cordova build android --prod
