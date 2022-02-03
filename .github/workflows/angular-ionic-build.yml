@@ -30,7 +30,7 @@ jobs:
         run: npm install
       
       - name: Ionic Initilisation
-        run: ionic init
+        run: ionic init "My-First-App" --type=angular
 
       - name: Add Android platform
         run: ionic cordova platform add android@latest
