@@ -36,10 +36,7 @@ jobs:
         run: ionic cordova platform add android@latest
 
       - name: Build Android Dev APK
-        run: ionic cordova build android
-
-      - name: Build Android Release APK
-        run: ionic cordova build android --release --prod
+        run: ionic cordova build android --noconfirm:yes
 
       - name: Generate the Android App Bundle
         working-directory: ./platforms/android/
@@ -51,8 +48,4 @@ jobs:
           name: app-dev
           path: platforms/android/app/build/outputs/apk/debug/app-debug.apk
 
-      - name: Upload release bundle
-        uses: actions/upload-artifact@v1
-        with:
-          name: app-release
-          path: platforms/android/app/build/outputs/bundle/release/app.aab
+     
